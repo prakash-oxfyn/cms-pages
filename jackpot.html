@@ -1,238 +1,241 @@
 <style>
-  .page {
-    position: relative;
-  }
-
-  .content {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 40px 20px 60px;
-  }
-
-  .page h1 {
-    text-align: center;
-    font-size: clamp(20px, 4vw, 28px);
-    font-weight: 700;
-    margin: 0 0 28px;
-  }
-
-  /* Jackpot value */
-  .jackpot-value {
-    text-align: center;
-    padding: 24px;
-    border-radius: 14px;
-    background: var(--bg-paper);
-    border: var(--border-paper);
-    margin-bottom: 36px;
-  }
-
-  .jackpot-value .label {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-primary);
-  }
-
-  .jackpot-value .amount {
-    font-size: clamp(28px, 7vw, 42px);
-    font-weight: 800;
-    background: var(--btn-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 6px 0 4px;
-  }
-
-  .jackpot-value .note {
-    font-size: 12.5px;
-    color: var(--text-muted);
-  }
-
-  /* Terms */
-  h2 {
-    font-size: 18px;
-    font-weight: 700;
-    border-bottom: var(--border-paper);
-    padding-bottom: 12px;
-    margin: 0 0 20px;
-  }
-
-  .term {
-    margin-bottom: 24px;
-  }
-
-  .term h3 {
-    font-size: 14.5px;
-    font-weight: 700;
-    margin: 0 0 8px;
-    display: flex;
-    gap: 8px;
-  }
-
-  .term h3 .n {
-    color: var(--color-primary);
-  }
-
-  .term p {
-    margin: 0 0 8px;
-    font-size: 13.5px;
-    color: var(--text-secondary);
-  }
-
-  .term ul {
-    margin: 0 0 8px;
-    padding-left: 20px;
-    font-size: 13.5px;
-    color: var(--text-secondary);
-  }
-
-  .term li {
-    margin-bottom: 6px;
-  }
-
-  .example,
-  .note-box {
-    font-size: 12.5px;
-    color: var(--text-secondary);
-    background: rgba(var(--color-primary-rgb), 0.06);
-    border: 1px solid rgba(var(--color-primary-rgb), 0.18);
-    border-radius: 8px;
-    padding: 8px 12px;
-    margin: 0 0 8px;
-  }
-
-  /* Winners Button */
-  .winners-btn {
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none;
-    white-space: nowrap;
-    border: none;
-    cursor: pointer;
-  }
-
-  .winners-btn:hover {
-    opacity: 0.9;
-  }
-
-  @media (max-width:480px) {
-    .winners-btn {
-      position: static;
-      display: inline-flex;
-      margin-bottom: 12px;
+    .page {
+      position: relative;
     }
-  }
+    
+      .content {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    
+      border: 1px solid rgba(var(--color-primary-rgb), 0.4);
+      border-radius: 12px;
+    
+      box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.12);
+    }
+    .page h1 {
+      text-align: center;
+      font-size: clamp(20px, 4vw, 28px);
+      font-weight: 700;
+      margin: 0 0 28px;
+    }
+    
+    /* Jackpot value */
+    .jackpot-value {
+      text-align: center;
+      padding: 24px;
+      border-radius: 14px;
+      background: var(--bg-paper);
+      border: var(--border-paper);
+      margin-bottom: 36px;
+    }
+    
+    .jackpot-value .label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+    }
+    
+    .jackpot-value .amount {
+      font-size: clamp(28px, 7vw, 42px);
+      font-weight: 800;
+      background: var(--btn-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 6px 0 4px;
+    }
+    
+    .jackpot-value .note {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    /* Terms */
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      border-bottom: var(--border-paper);
+      padding-bottom: 12px;
+      margin: 0 0 20px;
+    }
+    
+    .term {
+      margin-bottom: 24px;
+    }
+    
+    .term h3 {
+      font-size: 14.5px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      display: flex;
+      gap: 8px;
+    }
+    
+    .term h3 .n {
+      color: var(--color-primary);
+    }
+    
+    .term p {
+      margin: 0 0 8px;
+      font-size: 13.5px;
+      color: var(--text-lite);
+    }
+    
+    .term ul {
+      margin: 0 0 8px;
+      padding-left: 20px;
+      font-size: 13.5px;
+      color: var(--text-lite);
+    }
+    
+    .term li {
+      margin-bottom: 6px;
+    }
+    
+    .example,
+    .note-box {
+      font-size: 12.5px;
+      color: var(--text-lite);
+      background: rgba(var(--color-primary-rgb), 0.06);
+      border: 1px solid rgba(var(--color-primary-rgb), 0.18);
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 0 0 8px;
+    }
+    
+    /* Winners Button */
+    .winners-btn {
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .winners-btn:hover {
+      opacity: 0.9;
+    }
+    
+    @media (max-width:480px) {
+      .winners-btn {
+        position: static;
+        display: inline-flex;
+        margin-bottom: 12px;
+      }
+    }
 </style>
-</head>
 
-<body>
-  <div class="page">
+
+
+<div class="page">
     <div class="content">
-      <a href="/jackpot-winners" class="winners-btn btn-primary">🏆 Jackpot winners</a>
-      <h1>💰 July Monthly Jackpot Promotion</h1>
+        <a href="/jackpot-winners" class="winners-btn btn-primary">🏆 Jackpot winners</a>
+        <h1>💰 July Monthly Jackpot Promotion</h1>
 
-      <div class="jackpot-value">
-        <div class="label">Current Jackpot Value</div>
-        <div class="amount">₹10,000</div>
-        <div class="note">(The jackpot pool is updated daily.)</div>
-      </div>
+        <div class="jackpot-value">
+            <div class="label">Current Jackpot Value</div>
+            <div class="amount">₹10,000</div>
+            <div class="text-white">(The jackpot pool is updated daily.)</div>
+        </div>
 
-      <h2>📜 Terms &amp; Conditions</h2>
+        <h2>📜 Terms &amp; Conditions</h2>
 
-      <div class="term">
-        <h3><span class="n">1.</span> Jackpot Contribution</h3>
-        <p>A Jackpot Contribution Fee will be deducted for every eligible bet placed.</p>
-        <ul>
-          <li>The contribution is calculated based on the bet amount. For now, the Jackpot Percentage is 0.47% on the
-            bet
-            amount.</li>
-          <li>Example: If you place a bet of ₹100, a jackpot contribution fee of ₹0.47 will be deducted from your Real
-            Wallet.</li>
-          <li>The contribution amount may vary depending on the configured jackpot percentage.</li>
-        </ul>
-      </div>
+        <div class="term">
+            <h3><span class="n">1.</span> Jackpot Contribution</h3>
+            <p>A Jackpot Contribution Fee will be deducted for every eligible bet placed.</p>
+            <ul>
+                <li>The contribution is calculated based on the bet amount. For now, the Jackpot Percentage is 0.47% on the
+                    bet
+                    amount.</li>
+                <li>Example: If you place a bet of ₹100, a jackpot contribution fee of ₹0.47 will be deducted from your Real
+                    Wallet.</li>
+                <li>The contribution amount may vary depending on the configured jackpot percentage.</li>
+            </ul>
+        </div>
 
-      <div class="term">
-        <h3><span class="n">2.</span> Jackpot Pool Display</h3>
-        <ul>
-          <li>The Current Jackpot Value displayed on the website is updated once every day.</li>
-          <li>Players can view the latest jackpot amount in the Jackpot section.</li>
-        </ul>
-      </div>
+        <div class="term">
+            <h3><span class="n">2.</span> Jackpot Pool Display</h3>
+            <ul>
+                <li>The Current Jackpot Value displayed on the website is updated once every day.</li>
+                <li>Players can view the latest jackpot amount in the Jackpot section.</li>
+            </ul>
+        </div>
 
-      <div class="term">
-        <h3><span class="n">3.</span> Insufficient Balance</h3>
-        <p>If your Real Wallet does not have sufficient balance to deduct the jackpot contribution fee:</p>
-        <ul>
-          <li>The outstanding jackpot contribution will be recorded.</li>
-          <li>It will be automatically deducted from your next successful Real Wallet deposit before gameplay resumes.
-          </li>
-        </ul>
-      </div>
+        <div class="term">
+            <h3><span class="n">3.</span> Insufficient Balance</h3>
+            <p>If your Real Wallet does not have sufficient balance to deduct the jackpot contribution fee:</p>
+            <ul>
+                <li>The outstanding jackpot contribution will be recorded.</li>
+                <li>It will be automatically deducted from your next successful Real Wallet deposit before gameplay resumes.
+                </li>
+            </ul>
+        </div>
 
-      <div class="term">
-        <h3><span class="n">4.</span> Jackpot Winner Announcement</h3>
-        <ul>
-          <li>The Monthly Jackpot closes on the last day of each calendar month.</li>
-          <li>Winners will be announced on the 1st day of the following month.</li>
-          <li>Jackpot prizes will be credited directly to the winners' Real Wallets.</li>
-        </ul>
-        <div class="example">Example: July Jackpot → Winners announced on 1 August.</div>
-      </div>
+        <div class="term">
+            <h3><span class="n">4.</span> Jackpot Winner Announcement</h3>
+            <ul>
+                <li>The Monthly Jackpot closes on the last day of each calendar month.</li>
+                <li>Winners will be announced on the 1st day of the following month.</li>
+                <li>Jackpot prizes will be credited directly to the winners' Real Wallets.</li>
+            </ul>
+            <div class="example">Example: July Jackpot → Winners announced on 1 August.</div>
+        </div>
 
-      <div class="term">
-        <h3><span class="n">5.</span> Winner Selection</h3>
-        <ul>
-          <li>The jackpot prize pool will be distributed among the Top 10 eligible contributors for the month.</li>
-          <li>Players who contribute more towards the jackpot through eligible betting activity have greater chances of
-            winning.</li>
-        </ul>
-        <div class="note-box">Note: Contribution amount is determined by the total jackpot fees collected from your
-          eligible bets during the promotional period.</div>
-      </div>
+        <div class="term">
+            <h3><span class="n">5.</span> Winner Selection</h3>
+            <ul>
+                <li>The jackpot prize pool will be distributed among the Top 10 eligible contributors for the month.</li>
+                <li>Players who contribute more towards the jackpot through eligible betting activity have greater chances of
+                    winning.</li>
+            </ul>
+            <div class="note-box">Note: Contribution amount is determined by the total jackpot fees collected from your
+                eligible bets during the promotional period.</div>
+        </div>
 
-      <div class="term">
-        <h3><span class="n">6.</span> Eligibility</h3>
-        <p>To qualify for the Monthly Jackpot:</p>
-        <ul>
-          <li>Only eligible settled bets are considered.</li>
-          <li>Players must comply with all platform Terms &amp; Conditions.</li>
-          <li>Fraudulent, cancelled, voided, or reversed bets are excluded.</li>
-        </ul>
-      </div>
+        <div class="term">
+            <h3><span class="n">6.</span> Eligibility</h3>
+            <p>To qualify for the Monthly Jackpot:</p>
+            <ul>
+                <li>Only eligible settled bets are considered.</li>
+                <li>Players must comply with all platform Terms &amp; Conditions.</li>
+                <li>Fraudulent, cancelled, voided, or reversed bets are excluded.</li>
+            </ul>
+        </div>
 
-      <div class="term">
-        <h3><span class="n">7.</span> Fraud &amp; Abuse Policy</h3>
-        <p>The operator reserves the right to:</p>
-        <ul>
-          <li>Remove any player from the jackpot promotion.</li>
-          <li>Cancel jackpot winnings.</li>
-          <li>Suspend or disqualify accounts involved in fraud, bonus abuse, collusion, multiple accounts, or any
-            activity
-            deemed unfair.</li>
-        </ul>
-        <p>The operator's decision shall be final.</p>
-      </div>
+        <div class="term">
+            <h3><span class="n">7.</span> Fraud &amp; Abuse Policy</h3>
+            <p>The operator reserves the right to:</p>
+            <ul>
+                <li>Remove any player from the jackpot promotion.</li>
+                <li>Cancel jackpot winnings.</li>
+                <li>Suspend or disqualify accounts involved in fraud, bonus abuse, collusion, multiple accounts, or any
+                    activity
+                    deemed unfair.</li>
+            </ul>
+            <p>The operator's decision shall be final.</p>
+        </div>
 
-      <div class="term">
-        <h3><span class="n">8.</span> General Conditions</h3>
-        <ul>
-          <li>Jackpot contribution fees are non-refundable.</li>
-          <li>Jackpot prizes are credited as Real Money.</li>
-          <li>The operator reserves the right to amend, suspend, or terminate the jackpot promotion at any time without
-            prior notice.</li>
-        </ul>
-      </div>
+        <div class="term">
+            <h3><span class="n">8.</span> General Conditions</h3>
+            <ul>
+                <li>Jackpot contribution fees are non-refundable.</li>
+                <li>Jackpot prizes are credited as Real Money.</li>
+                <li>The operator reserves the right to amend, suspend, or terminate the jackpot promotion at any time without
+                    prior notice.</li>
+            </ul>
+        </div>
 
     </div>
-  </div>
-</body>
+</div>
